@@ -3,6 +3,7 @@ package reflect;
 public class Teacher {
 	private String name ;
 	private int age ;
+	public String sex ;
 	
 	/*
 	 * Constructors
@@ -10,26 +11,40 @@ public class Teacher {
 	public Teacher() {
 		this(18);
 	}
+	
 	private Teacher(int age) {
+		this("elvis");
 		this.age = age;
-		System.out.println(age);
 	}
+	
 	protected Teacher(String name){
 		this.name = name;
 	}
+	
 	public Teacher(String name,int age){
 		this.name = name;
 		this.age = age;
-		System.out.println(name + ":"+ age);
 	}
 	
 	public Teacher(boolean b){
 		System.out.println("this is a boolean method");
 	}
 	
+	/*
+	 * methods
+	 */
+	public String say(){
+		return "hello";
+	}
+	
+	public String talk(String str){
+		System.out.println(str);
+		return str;
+	}
 	
 	public String toString(){
-		return "this is toString()";
+		System.out.println(this.name + ":" + this.age);
+		return null;
 	}
 	
 	/*
@@ -46,5 +61,12 @@ public class Teacher {
 	}
 	public void setAge(int age) {
 		this.age = age;
+	}
+	
+	/*
+	 * main method
+	 */
+	public static void main(String[] args){
+		System.out.println("main method");
 	}
 }
