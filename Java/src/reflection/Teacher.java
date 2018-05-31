@@ -1,4 +1,4 @@
-package reflect;
+package reflection;
 
 public class Teacher {
 	private String name ;
@@ -48,7 +48,7 @@ public class Teacher {
 	}
 	
 	/*
-	 * getter¡¢setter
+	 * getterï¿½ï¿½setter
 	 */
 	public String getName() {
 		return name;

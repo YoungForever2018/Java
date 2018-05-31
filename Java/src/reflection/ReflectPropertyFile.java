@@ -1,4 +1,4 @@
-package reflect;
+package reflection;
 
 import java.io.FileReader;
 import java.lang.reflect.Method;
@@ -14,7 +14,7 @@ public class ReflectPropertyFile {
 	private static Map<Object,Object> map = new HashMap<Object, Object>();
 	
 	/**
-	 * ╪стьеДжцнд╪Ч
+	 * О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫
 	 */
 	static{
 		try {

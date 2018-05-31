@@ -1,4 +1,4 @@
-package reflect;
+package reflection;
 
 import java.lang.reflect.Constructor;
 
@@ -7,7 +7,7 @@ public class ReflectConstructor {
 	public static void main(String[] args) {
 		Class<?> c = Reflect.getClass("reflect.Teacher");
 		
-		//获取所有的构造方法、构造方法参数、并打印
+		//锟斤拷取锟斤拷锟叫的癸拷锟届方锟斤拷锟斤拷锟斤拷锟届方锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷印
 		Constructor<?>[] constructors = getConstructor(c, 2);
 		for (Constructor<?> constructor : constructors) {
 			System.out.println("constructor: "+constructor);
@@ -20,10 +20,10 @@ public class ReflectConstructor {
  	}
 
 	/**
-	 * 获取构造方法
+	 * 锟斤拷取锟斤拷锟届方锟斤拷
 	 * @param c
-	 * @param modifier = 1 获取公有构造函数(public)，
-	 * 		  modifier = 2 获取所有构造函数(public,private, protected,default)。
+	 * @param modifier = 1 锟斤拷取锟斤拷锟叫癸拷锟届函锟斤拷(public)锟斤拷
+	 * 		  modifier = 2 锟斤拷取锟斤拷锟叫癸拷锟届函锟斤拷(public,private, protected,default)锟斤拷
 	 * @return
 	 */
 	private static Constructor<?>[] getConstructor(Class<?> c,int modifier){
@@ -37,10 +37,10 @@ public class ReflectConstructor {
 	}
 	
 	/**
-	 * 获取构造方法
+	 * 锟斤拷取锟斤拷锟届方锟斤拷
 	 * @param c
-	 * @param modifier = 1 获取公有构造函数(public)，
-	 * 		  modifier = 2 获取所有构造函数(public,private, protected,default)。
+	 * @param modifier = 1 锟斤拷取锟斤拷锟叫癸拷锟届函锟斤拷(public)锟斤拷
+	 * 		  modifier = 2 锟斤拷取锟斤拷锟叫癸拷锟届函锟斤拷(public,private, protected,default)锟斤拷
 	 * @param parameterType 
 	 */
 	@SuppressWarnings("unused")
@@ -59,7 +59,7 @@ public class ReflectConstructor {
 	}
 	
 	/**
-	 * 获取构造方法的参数类型
+	 * 锟斤拷取锟斤拷锟届方锟斤拷锟侥诧拷锟斤拷锟斤拷锟斤拷
 	 * @param constructor
 	 * @return
 	 */

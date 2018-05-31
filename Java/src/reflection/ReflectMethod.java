@@ -1,4 +1,4 @@
-package reflect;
+package reflection;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
@@ -20,7 +20,7 @@ public class ReflectMethod {
 				System.out.println("type-" +type);
 			}
 			
-			//µ÷ÓÃ·½·¨
+			//ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½
 			if(method.getName().equals("talk")){
 				try {
 					Teacher teacher = (Teacher)c.getConstructor().newInstance();
@@ -33,12 +33,12 @@ public class ReflectMethod {
 		}
 		
 		try {
-			//µ÷ÓÃ·½·¨
+			//ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½
 			Object object = c.getConstructor().newInstance();
 			Method method = c.getMethod("talk", java.lang.String.class);
 			method.invoke(object, "hi");
 			
-			//µ÷ÓÃ·½·¨main·½·¨
+			//ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½mainï¿½ï¿½ï¿½ï¿½
 			Method mainMethod = c.getMethod("main", String[].class);
 			mainMethod.invoke(object, (Object)new String[]{"a","b"});
 		} catch (Exception e) {
@@ -47,7 +47,7 @@ public class ReflectMethod {
 	}
 
 	/**
-	 * »ñÈ¡¹«ÓÐµÄ»òËùÓÐÒÑ¶¨ÒåµÄ³ÉÔ±·½·¨,modifier==1 ±íÊ¾È¡¹«ÓÐ
+	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ÐµÄ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½Ä³ï¿½Ô±ï¿½ï¿½ï¿½ï¿½,modifier==1 ï¿½ï¿½Ê¾È¡ï¿½ï¿½ï¿½ï¿½
 	 */
 	public static Method[] getMethod(Class<?> c , int modifier){
 		Method[] methods  = null;
@@ -60,7 +60,7 @@ public class ReflectMethod {
 	}
 	
 	/**
-	 * »ñÈ¡¹«ÓÐµÄ»òËùÓÐÒÑ¶¨ÒåµÄ³ÉÔ±·½·¨,modifier==1 ±íÊ¾È¡¹«ÓÐ
+	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ÐµÄ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½Ä³ï¿½Ô±ï¿½ï¿½ï¿½ï¿½,modifier==1 ï¿½ï¿½Ê¾È¡ï¿½ï¿½ï¿½ï¿½
 	 */
 	public static Method getMethod(Class<?> c , String name , int modifier){
 		Method field = null;
@@ -77,7 +77,7 @@ public class ReflectMethod {
 	}
 	
 	/**
-	 * ²ÎÊýÀàÐÍ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param method
 	 * @return
 	 */

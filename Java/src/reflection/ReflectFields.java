@@ -1,4 +1,4 @@
-package reflect;
+package reflection;
 
 import java.lang.reflect.Field;
 
@@ -8,14 +8,14 @@ public class ReflectFields {
 
 		Class<?> c = Reflect.getClass("reflect.Teacher");
 
-		//ÎªËùÓÐ³ÉÔ±±äÁ¿ÉèÖÃÖµ¡¢´òÓ¡
+		//Îªï¿½ï¿½ï¿½Ð³ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ó¡
 		Field[] declaredFields = getField(c, 2);
 			
 		try {
 			Object object = c.getConstructor().newInstance();
 			for (Field declaredField : declaredFields) {
 				String fieldName = declaredField.getName();
-				declaredField.setAccessible(true); //ÉèÖÃÖµÊ±ºöÂÔ·ÃÎÊÐÞÊÎ·û
+				declaredField.setAccessible(true); //ï¿½ï¿½ï¿½ï¿½ÖµÊ±ï¿½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î·ï¿½
 				
 				switch (fieldName) {
 				case "name":
@@ -43,7 +43,7 @@ public class ReflectFields {
 	}
 	
 	/**
-	 * »ñÈ¡¹«ÓÐµÄ»òËùÓÐÒÑ¶¨ÒåµÄ³ÉÔ±±äÁ¿,modifier==1 ±íÊ¾È¡¹«ÓÐ
+	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ÐµÄ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½Ä³ï¿½Ô±ï¿½ï¿½ï¿½ï¿½,modifier==1 ï¿½ï¿½Ê¾È¡ï¿½ï¿½ï¿½ï¿½
 	 */
 	public static Field[] getField(Class<?> c , int modifier){
 		Field[] fields  = null;
@@ -56,7 +56,7 @@ public class ReflectFields {
 	}
 	
 	/**
-	 * »ñÈ¡¹«ÓÐµÄ»òËùÓÐÒÑ¶¨ÒåµÄ³ÉÔ±±äÁ¿,modifier==1 ±íÊ¾È¡¹«ÓÐ
+	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ÐµÄ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½Ä³ï¿½Ô±ï¿½ï¿½ï¿½ï¿½,modifier==1 ï¿½ï¿½Ê¾È¡ï¿½ï¿½ï¿½ï¿½
 	 */
 	public static Field getField(Class<?> c , String name , int modifier){
 		Field field = null;

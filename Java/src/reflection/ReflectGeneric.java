@@ -1,4 +1,4 @@
-package reflect;
+package reflection;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ public class ReflectGeneric {
 	}
 	
 	/**
-	 * Í¨¹ý·´Éä¿ÉÒÔÍ¨¹ý·ºÐÍ¼ì²é
+	 * Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½
 	 */
 	public static void overCheckOfGeneric(){
 		ArrayList<String> arrayList = new ArrayList<String>();

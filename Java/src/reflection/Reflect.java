@@ -1,23 +1,23 @@
-package reflect;
+package reflection;
 
 import java.lang.reflect.Constructor;
 /**
- * Java·´Éä»úÖÆ£ºJavaÊÇ·Ç¶¯Ì¬ÓïÑÔ£¬µ«·´Éä»úÖÆÊÇÒ»¸ö¶¯Ì¬Ïà¹ØµÄ»úÖÆ¡£
- * 				ÔÚ³ÌÐòÔËÐÐÊ±¶ÔÈÎÒâÒ»¸öÀàJVM¿ÉÒÔÖªµÀÆäÊôÐÔºÍ·½·¨¡¢Éú³ÉÀàµÄÊµÀý¡¢µ÷ÓÃÆäÊôÐÔºÍ·½·¨¡£
- * 				(¶¯Ì¬ÓïÑÔÊÇ³ÌÐòÔËÐÐÊ±¿ÉÒÔ¸Ä±ä½á¹¹£¬ÈçÒý½øÐÂµÄ·½·¨¡¢É¾³ýÒÑÓÐ·½·¨£¬JavaScript)
+ * Javaï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½Javaï¿½Ç·Ç¶ï¿½Ì¬ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½ØµÄ»ï¿½ï¿½Æ¡ï¿½
+ * 				ï¿½Ú³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½JVMï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÔºÍ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÔºÍ·ï¿½ï¿½ï¿½ï¿½ï¿½
+ * 				(ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½Ç³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ô¸Ä±ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÂµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½JavaScript)
  * 
- * ·´ÉäAPI: Class¡¢Method¡¢Field¡¢Constructor 
+ * ï¿½ï¿½ï¿½ï¿½API: Classï¿½ï¿½Methodï¿½ï¿½Fieldï¿½ï¿½Constructor 
  * 
- * Ê¹ÓÃ·´ÉäµÄ²½Öè£º1.»ñÈ¡ÀàµÄClass¶ÔÏó£º3ÖÖ·½Ê½
- * 				  2.´´½¨ÀàµÄÊµÀý£º2ÖÖ·½Ê½
- * 				  3.µ÷ÓÃClass¶ÔÏóµÄ·½·¨»ñÈ¡ÀàµÄ³ÉÔ±ÐÅÏ¢ ²¢²Ù×÷		
+ * Ê¹ï¿½Ã·ï¿½ï¿½ï¿½Ä²ï¿½ï¿½è£º1.ï¿½ï¿½È¡ï¿½ï¿½ï¿½Classï¿½ï¿½ï¿½ï¿½3ï¿½Ö·ï¿½Ê½
+ * 				  2.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½2ï¿½Ö·ï¿½Ê½
+ * 				  3.ï¿½ï¿½ï¿½ï¿½Classï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½Ä³ï¿½Ô±ï¿½ï¿½Ï¢ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½		
  */
 public class Reflect {
 
 	public static void main(String[] args) {
 		Student s = new Student("elvis",18);
 		
-		//ÈýÖÖ·½Ê½»ñÈ¡Class¶ÔÏó ,class.forName("reflect.Student")×î³£ÓÃ
+		//ï¿½ï¿½ï¿½Ö·ï¿½Ê½ï¿½ï¿½È¡Classï¿½ï¿½ï¿½ï¿½ ,class.forName("reflect.Student")ï¿½î³£ï¿½ï¿½
 		Class<?> c1 = getClass(s);
 		Class<?> c2 = getClass("reflect.Student"); 
 		Class<?> c3 = Student.class;
@@ -26,14 +26,14 @@ public class Reflect {
 		System.out.println(c1==c2);
 		System.out.println(c1==c3);
 		
-		//Á½ÖÖ·½Ê½´´½¨¶ÔÏóÊµÀý 
+		//ï¿½ï¿½ï¿½Ö·ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ 
 		try {
-			//µÚÒ»ÖÖÐèÒªÀàÓÐÄ¬ÈÏµÄ¹¹ÔìÆ÷
+			//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ÏµÄ¹ï¿½ï¿½ï¿½ï¿½ï¿½
 			Student s1 = (Student) c2.newInstance(); //equals  Student s1 = (Student) c2.getConstructor().newInstance();
 			s1.setName("elvis");
 			System.out.println(s1.getName());
 			
-			//µÚ¶þÖÖ¸ù¾ÝÑ¡¶¨µÄ¹¹Ôì·½·¨»ñµÃ
+			//ï¿½Ú¶ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½
 			Student s2 = (Student) c2.getConstructor(String.class,int.class).newInstance("elvis",22);
 			System.out.println(s2.getName()+":"+s2.getAge());
 		} catch (Exception e) {
@@ -42,7 +42,7 @@ public class Reflect {
 	}
 	
 	/**
-	 * »ñÈ¡Class¶ÔÏó
+	 * ï¿½ï¿½È¡Classï¿½ï¿½ï¿½ï¿½
 	 * @param object
 	 * @return
 	 */
@@ -52,7 +52,7 @@ public class Reflect {
 	}
 	
 	/**
-	 * »ñÈ¡Class¶ÔÏó£¬³£ÓÃ
+	 * ï¿½ï¿½È¡Classï¿½ï¿½ï¿½ó£¬³ï¿½ï¿½ï¿½
 	 * @param className
 	 * @return
 	 */
@@ -68,7 +68,7 @@ public class Reflect {
 
 	public static void getConstructors(){
 		Class<?> c = getClass("reflect.Student");
-		//»ñÈ¡¹¹Ôì·½·¨
+		//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ì·½ï¿½ï¿½
 		Constructor<?>[] constructors = c.getConstructors();
 		for(Constructor<?> constructor :constructors){
 			System.out.println(constructor);

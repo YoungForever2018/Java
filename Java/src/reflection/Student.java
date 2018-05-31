@@ -1,4 +1,4 @@
-package reflect;
+package reflection;
 
 public class Student {
 	
