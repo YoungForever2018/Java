@@ -6,14 +6,14 @@ package reflection;
  * Reflection API: Class、Method、Field、Constructor 
  * 
  * Steps of use reflection 1.get the object associated with the class or interface with the given name . for example : 
- * 							 	Class<?> c = Class.forName("name");
- * 				  		   2.create a new instance , there are three ways, for example ： 
- * 								Object o = c.newInstance();
- * 				 	       3.get class members and invoke .for example:
- * 								Method[] methods = c.getMethods();
- * 								foreach(Method method ： methods){
- * 									method.invoke(o,Object...args)
- * 								}
+ * 					Class<?> c = Class.forName("name");
+ * 			   2.create a new instance , there are three ways, for example ： 
+ * 					Object o = c.newInstance();
+ * 			   3.get class members and invoke .for example:
+* 					Method[] methods = c.getMethods();
+* 					foreach(Method method ： methods){
+* 						method.invoke(o,Object...args)
+* 					}
  */
 public class Reflect {
 
