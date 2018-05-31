@@ -10,7 +10,8 @@ public class Student {
 	}
 	
 	public Student(String name ,int age){  
-	    System.out.println(name+" £º"+ age);
+	    this.name = name;
+	    this.age = age;
 	}  
 	  
 	
