@@ -9,7 +9,7 @@ public class ReflectGeneric {
 	}
 	
 	/**
-	 * ͨ���������ͨ�����ͼ��
+	 * ignore generic check
 	 */
 	public static void overCheckOfGeneric(){
 		ArrayList<String> arrayList = new ArrayList<String>();

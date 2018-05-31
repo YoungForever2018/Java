@@ -1,5 +1,3 @@
 eclipse.preferences.version=1
-encoding//src/reflection=UTF-8
-encoding//src/reflection/Reflect.java=UTF-8
-encoding/<project>=UTF-8
-encoding/src=UTF-8
+encoding//src/reflection/ReflectMethod.java=UTF-8
+encoding/src=GBK

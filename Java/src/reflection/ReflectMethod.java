@@ -19,26 +19,15 @@ public class ReflectMethod {
 			for (Class<?> type : types) {
 				System.out.println("type-" +type);
 			}
-			
-			//���÷���
-			if(method.getName().equals("talk")){
-				try {
-					Teacher teacher = (Teacher)c.getConstructor().newInstance();
-					teacher.talk("hello");
-					teacher.toString();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
 		}
 		
 		try {
-			//���÷���
+			//invoke specified method
 			Object object = c.getConstructor().newInstance();
 			Method method = c.getMethod("talk", java.lang.String.class);
 			method.invoke(object, "hi");
 			
-			//���÷���main����
+			//invoke main method 
 			Method mainMethod = c.getMethod("main", String[].class);
 			mainMethod.invoke(object, (Object)new String[]{"a","b"});
 		} catch (Exception e) {
@@ -46,9 +35,7 @@ public class ReflectMethod {
 		}
 	}
 
-	/**
-	 * ��ȡ���еĻ������Ѷ���ĳ�Ա����,modifier==1 ��ʾȡ����
-	 */
+
 	public static Method[] getMethod(Class<?> c , int modifier){
 		Method[] methods  = null;
 		if(modifier == 1){
@@ -59,9 +46,7 @@ public class ReflectMethod {
 		return methods;
 	}
 	
-	/**
-	 * ��ȡ���еĻ������Ѷ���ĳ�Ա����,modifier==1 ��ʾȡ����
-	 */
+
 	public static Method getMethod(Class<?> c , String name , int modifier){
 		Method field = null;
 		try {
@@ -77,9 +62,7 @@ public class ReflectMethod {
 	}
 	
 	/**
-	 * ��������
-	 * @param method
-	 * @return
+	 * @return Parameters' Type
 	 */
 	public static Class<?>[] getMethodParamType(Method method) {
 		Class<?>[] types = method.getParameterTypes();

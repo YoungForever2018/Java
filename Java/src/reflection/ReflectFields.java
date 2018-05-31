@@ -8,14 +8,14 @@ public class ReflectFields {
 
 		Class<?> c = Reflect.getClass("reflect.Teacher");
 
-		//Ϊ���г�Ա��������ֵ����ӡ
+		//get all declared fields
 		Field[] declaredFields = getField(c, 2);
 			
 		try {
 			Object object = c.getConstructor().newInstance();
 			for (Field declaredField : declaredFields) {
 				String fieldName = declaredField.getName();
-				declaredField.setAccessible(true); //����ֵʱ���Է������η�
+				declaredField.setAccessible(true); //ignore generic check
 				
 				switch (fieldName) {
 				case "name":
@@ -43,7 +43,7 @@ public class ReflectFields {
 	}
 	
 	/**
-	 * ��ȡ���еĻ������Ѷ���ĳ�Ա����,modifier==1 ��ʾȡ����
+	 * modifier == 1 represented this method will returns public fields of the class
 	 */
 	public static Field[] getField(Class<?> c , int modifier){
 		Field[] fields  = null;
@@ -56,7 +56,7 @@ public class ReflectFields {
 	}
 	
 	/**
-	 * ��ȡ���еĻ������Ѷ���ĳ�Ա����,modifier==1 ��ʾȡ����
+	 * modifier ==1 represented this method will returns public fields of the class with the specified name
 	 */
 	public static Field getField(Class<?> c , String name , int modifier){
 		Field field = null;

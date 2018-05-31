@@ -8,13 +8,17 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Set;
-
+/**
+ * 
+ * load the class dynamically using reflection
+ *
+ */
 public class ReflectPropertyFile {
 
 	private static Map<Object,Object> map = new HashMap<Object, Object>();
 	
 	/**
-	 * ���������ļ�
+	 * load properties
 	 */
 	static{
 		try {

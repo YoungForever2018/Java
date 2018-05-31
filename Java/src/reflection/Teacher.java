@@ -48,7 +48,7 @@ public class Teacher {
 	}
 	
 	/*
-	 * getter��setter
+	 * getter setter
 	 */
 	public String getName() {
 		return name;
