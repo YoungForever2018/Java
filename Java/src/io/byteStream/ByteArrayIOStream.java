@@ -6,7 +6,6 @@ public class ByteArrayIOStream {
 
 	public static void main(String[] args) {
 		testByteArrayInputStream();
-	
 	}
 
 	/**

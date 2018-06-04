@@ -1,13 +1,16 @@
 package array;
 
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Arrays_Demo {
 
 	public static void main(String[] args) {
 		int[] array1 = new int[]{1,6,3,9,1,0,2};
 		int[] array2 = new int[]{1,6,3,9,1,0,2};
-		
+
 		testEquals(array1, array2);
 //		testSort(array1);
 //		testCopyOf(array1);
@@ -15,6 +18,14 @@ public class Arrays_Demo {
 //		stringToArray();
 //		testBinarySearch(array1);
 		
+List<int[]> list = new ArrayList<int[]>(Arrays.asList(array1));
+list.add(new int[]{1,2});
+for (int[] is : list) {
+	for(int i : is){
+		System.out.print(i);
+	}
+	System.out.println();
+}
 	}
 	
 	/**
@@ -34,20 +45,12 @@ public class Arrays_Demo {
 	/**
 	 * reverse
 	 */
-	public static void reverse(int[] array){
-		int[] result = new int[array.length];
-		for (int i = 0 , j = array.length -1 ; i < array.length; i++,j--) {
-			result[i] = array[j];
-		}
-		
-		for (int i : array) {
-			System.out.print(i);
-		}
-		System.out.println();
-		for (int i : result) {
-			System.out.print(i);
-		}
+public static void reverse(int[] array){
+	int[] result = new int[array.length];
+	for (int i = 0 , j = array.length -1 ; i < array.length; i++,j--) {
+		result[i] = array[j];
 	}
+}
 	
 	/**
 	 * test Arrays.sort()
@@ -85,7 +88,6 @@ public class Arrays_Demo {
 		for (int i : arrayCopy) {
 			System.out.print(i);
 		}
-		//System.out.println(arrayCopy.hashCode() == array.hashCode()); 
 	}
 	
 	/**
