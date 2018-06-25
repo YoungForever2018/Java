@@ -33,6 +33,7 @@ public class ReadThread implements Runnable {
 			fileInputStream = new FileInputStream(this.file);
 			bufferedInputStream = new BufferedInputStream(fileInputStream);
 			
+			@SuppressWarnings("unused")
 			ArrayList<byte[]> list = new ArrayList<byte[]>();
 			byte[] bytes = new byte[64];
 			int length = -1;

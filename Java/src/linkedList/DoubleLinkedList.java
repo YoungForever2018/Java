@@ -1,9 +1,5 @@
 package linkedList;
 
-import javax.xml.soap.Node;
-
-import org.omg.CosNaming.NamingContextPackage.NotEmpty;
-
 public class DoubleLinkedList {
 
 	public static void main(String[] args) {

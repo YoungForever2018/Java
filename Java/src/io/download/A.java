@@ -54,6 +54,7 @@ public class A {
 				public void run() {
 					try {
 						Charset charset = Charset.defaultCharset();
+						@SuppressWarnings("resource")
 						BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file),charset));
 						String line = null;
 						ArrayList<String> cache = new ArrayList<String>();
